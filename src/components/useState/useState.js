@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useState } from "react";
 
-const useState = () => {
-    const [count, setCount] = useState(0)
+const UseState = () => {
+  const [count, setCount] = useState(0);
+  console.log("use state render");
   return (
-    <button onClick={() => setCount(c => c + 1)}>Count = {count}</button>
-  )
-}
+    <div>
+      <button onClick={() => setCount((c) => c + 1)}>Count = {count}</button>
+      <button onClick={() => setCount(0)}>Count to 0</button>
+      <button onClick={() => setCount(5)}>Count to 5</button>
+    </div>
+  );
+};
 
-export default useState
+export default UseState;
